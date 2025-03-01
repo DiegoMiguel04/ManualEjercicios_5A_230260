@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+<div class="container">
+	<app-sidebar [ngClass]="{'hidden': isSidebarHidden}"></app-sidebar>
+	<button mat-raised-button (click)="toggleSidebar()">.</button>
+
+	<app-page-content></app-page-content>
+</div>

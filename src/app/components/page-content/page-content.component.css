@@ -1,0 +1,16 @@
+* {
+    height: 100%;
+    color: #fff;
+}
+
+app-breadcrumb {
+    height: 15%;
+}
+
+app-content {
+    height: 70%;
+}
+
+app-footer {
+    height: 15%;
+}
