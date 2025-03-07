@@ -1,50 +1,147 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-	<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<nav class="bg-white navbarfull">
+	<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-6">
 			<a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-				<!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
-				<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">230260</span>
+				<svg _ngcontent-ng-c1846892879="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 223 236" width="32" class="angular-logo"><g _ngcontent-ng-c1846892879="" clip-path="url(#a)"><path _ngcontent-ng-c1846892879="" fill="url(#b)" d="m222.077 39.192-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"></path><path _ngcontent-ng-c1846892879="" fill="url(#c)" d="m222.077 39.192-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"></path></g><defs _ngcontent-ng-c1846892879=""><linearGradient _ngcontent-ng-c1846892879="" id="b" x1="49.009" x2="225.829" y1="213.75" y2="129.722" gradientUnits="userSpaceOnUse"><stop _ngcontent-ng-c1846892879="" stop-color="#E40035"></stop><stop _ngcontent-ng-c1846892879="" offset=".24" stop-color="#F60A48"></stop><stop _ngcontent-ng-c1846892879="" offset=".352" stop-color="#F20755"></stop><stop _ngcontent-ng-c1846892879="" offset=".494" stop-color="#DC087D"></stop><stop _ngcontent-ng-c1846892879="" offset=".745" stop-color="#9717E7"></stop><stop _ngcontent-ng-c1846892879="" offset="1" stop-color="#6C00F5"></stop></linearGradient><linearGradient _ngcontent-ng-c1846892879="" id="c" x1="41.025" x2="156.741" y1="28.344" y2="160.344" gradientUnits="userSpaceOnUse"><stop _ngcontent-ng-c1846892879="" stop-color="#FF31D9"></stop><stop _ngcontent-ng-c1846892879="" offset="1" stop-color="#FF5BE1" stop-opacity="0"></stop></linearGradient><clipPath _ngcontent-ng-c1846892879="" id="a"><path _ngcontent-ng-c1846892879="" fill="#fff" d="M0 0h223v236H0z"></path></clipPath></defs></svg>
+				<span class="ml-2 self-center text-2xl font-semibold whitespace-nowrap text-gray-700">Manual de practicas</span>
 			</a>
-		<div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-			<button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-				<span class="sr-only">Open user menu</span>
-				<img class="w-8 h-8 rounded-full" src="assets/230260.jpg" alt="user photo">
+		<div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse mr-5">
+			<button class="absolute right-10 flex text-sm rounded-full cursor-pointer" (click)="toggleDropdown()">
+				<img class="w-12 h-12 rounded-full" src="assets/230260.jpg" alt="user photo">
 			</button>
-			<!-- Dropdown menu -->
-			<div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+			<div *ngIf="isDropdownOpen" class="z-50 absolute right-5 top-20 w-60 text-base list-none bg-white divide-y divide-gray-300 rounded-lg shadow-lg">
 				<div class="px-4 py-3">
-					<span class="block text-sm text-gray-900 dark:text-white">Diego Miguel</span>
-					<span class="block text-sm  text-gray-500 truncate dark:text-gray-400">riverachavezdiegomiguel&#64;gmail.com</span>
+					<span class="block text-sm text-gray-800">DiegoMiguel04</span>
+					<span class="block text-sm text-gray-800 truncate">riverachavezdiegomiguel&#64;gmail.com</span>
 				</div>
-				<ul class="py-2" aria-labelledby="user-menu-button">
+				<ul class="py-2">
 					<li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Perfil</a>
+						<button class="w-full block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition ease-in-out duration-200">
+							Perfil
+						</button>
 					</li>
 					<li>
-						<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Cerrar sesión</a>
+						<button (click)="onHideAll()" class="w-full block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition ease-in-out duration-200 cursor-pointer">
+							Cerrar sesión
+						</button>
 					</li>
 				</ul>
 			</div>
-			<button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
-				<span class="sr-only">Open main menu</span>
-				<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-				</svg>
-			</button>
 		</div>
-		<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-			<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+		<div class="items-center justify-between hidden w-full min-h-full md:flex md:w-auto md:order-1" id="navbar-user">
+			<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
 				<li>
-					<a href="#" class="mx-5 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Ejercicios</a>
+					<button class="min-w-30 h-6 text-center block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-gray-500 transition duration-300 ease-in-out hover:cursor-pointer filtro-modal-blur" (click)="toggleModal()">Ejercicios</button>
+					<div *ngIf="isModalOpen" class="modal-overlay" (click)="closeModal()">
+						<mat-accordion class="modal-content" (click)="$event.stopPropagation()">
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Componentes en Angular','01','2','En esta actividad se pone en practica el como actualizar la plantilla y los estilos de un componente.', 'Los componentes son los elementos básicos para cualquier aplicación Angular. Cada componente esta conformado por tres partes: clase en TypeScript, plantilla HTML y estilos CSS','p1')">
+								<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 01</mat-panel-title>
+								<mat-panel-description>Componentes en Angular</mat-panel-description>
+								</mat-expansion-panel-header>
+								<p class="justify-start">En esta actividad se pone en practica el como actualizar la plantilla y los estilos de un componente.</p>
+							</mat-expansion-panel>
+				
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Actualización de la clase de un componente','02','2','En esta actividad se pone en practica como actualizar la clase de un componente y como usar la interpolación.', 'En Angular, la lógica y el comportamiento del componente se definen en la clase TypeScript del componente.','p2')">
+								<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 02</mat-panel-title>
+								<mat-panel-description>Actualización de una clase</mat-panel-description>
+								</mat-expansion-panel-header>
+								<p>En esta actividad se pone en practica como actualizar la clase de un componente y como usar la interpolación.</p>
+							</mat-expansion-panel>
+				
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Composición de componentes','03','2','En esta actividad se pone en practica la composición de los componentes.', 'La propiedad <selector> de la configuración del componente le proporciona un nombre para usar al hacer referencia al componente en otra plantilla. El <selector> se usa como una etiqueta HTML, por ejemplo, app-user sería <app-user/> en la plantilla.','p3')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 03</mat-panel-title>
+								<mat-panel-description>Composición de componentes</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica la composición de los componentes.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Flujo de control en componentes - @if','04','2','En esta actividad se pone en practica el uso de condicionales en plantillas.', 'Para expresar visualizaciones condicionales en plantillas, Angular utiliza la sintaxis de plantilla @if.','p4')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 04</mat-panel-title>
+								<mat-panel-description>Flujo de control en componentes - &#64;if</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica el uso de condicionales en plantillas.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Flujo de control en componentes - @for','05','2','En esta actividad se pone en practica el uso del @for para repetir elementos en una plantilla.', 'Al crear aplicaciones web, es necesario repetir algún código una cantidad específica de veces, por ejemplo, dada una matriz de nombres, es posible que se desee mostrar cada nombre en una etiqueta <p>.','p5')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 05</mat-panel-title>
+								<mat-panel-description>Flujo de control en componentes - &#64;for</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica el uso del &#64;for para repetir elementos en una plantilla.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Vinculación de propiedades en Angular','06','2','En esta actividad se pone en practica la vinculación de propiedades entre plantillas.', 'Utilizando la vinculación de propiedades para establecer dinámicamente valores para propiedades y atributos, se pueden realizar acciones como alternar funciones de botones, establecer rutas de imágenes y compartir valores entre componentes.','p6')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 06</mat-panel-title>
+								<mat-panel-description>Vinculación de propiedades en Angular</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica la vinculación de propiedades entre plantillas.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Controlador de eventos','07','2','En esta actividad se pone en practica el uso de un controlador de eventos.', 'El manejo de eventos permite funciones interactivas en aplicaciones web. Estos brindan la capacidad de responder a acciones del usuario, como pulsaciones de botones, envíos de formularios y demas.','p7')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 07</mat-panel-title>
+								<mat-panel-description>Controlador de eventos</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica el uso de un controlador de eventos.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Comunicacion de componentes con @Input','08','2','En esta actividad se pone en practica el uso de @Input para enviar información entre componentes.', 'A veces, el desarrollo de aplicaciones requiere que envíes datos a un componente. Estos datos se pueden usar para personalizar un componente o quizás enviar información desde un componente principal a un componente secundario. Angular usa un concepto llamado Input. Es similar a las propiedades de otros frameworks.','p8')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 08</mat-panel-title>
+								<mat-panel-description>Component Communication with &#64;Input</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica el uso de &#64;Input para enviar información entre componentes.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Comunicacion de componentes con @Output','09','2','En esta actividad se pone en practica el uso de @Output para recibir información entre componentes.', 'Al trabajar con componentes, puede ser necesario notificar a otros componentes que algo ha sucedido. Quizás se hizo clic en algun botón, se agregó o eliminó un elemento de una lista o se produjo alguna otra actualización importante. En este escenario, los componentes deben comunicarse con los componentes principales.','p9')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 09</mat-panel-title>
+								<mat-panel-description>Component Communication with &#64;Input</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica el uso de &#64;Output para recibir información entre componentes.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Vistas diferibles','10','2','En esta actividad se ponen en practica las vistas diferibles para prolongar la carga de una sección en la misma plantilla del componente.', 'A veces, en el desarrollo de aplicaciones, se termina con una gran cantidad de componentes a los que se necesita hacer referencia en el proyecto, pero algunos de estos no necesitan cargarse de inmediato por diversas razones.
+							Tal vez estén debajo del pliegue visible o sean componentes pesados con los que no se interactúa hasta más tarde. En ese caso, podemos cargar algunos de esos recursos más tarde con vistas diferibles.','p10')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 10</mat-panel-title>
+								<mat-panel-description>Vistas diferibles</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se ponen en practica las vistas diferibles para prolongar la carga de una sección en la misma plantilla del componente.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Optimización de imagenes','11','2','En esta actividad se pone en practica el NgOptimizedImage para garantizar que las imagenes se carguen de manera eficiente.', 'Las imágenes son una parte importante de muchas aplicaciones y pueden contribuir en gran medida a los problemas de rendimiento de las aplicaciones. La optimización de imágenes puede ser un tema complejo, pero Angular se encarga de la mayor parte del problema gracias a la NgOptimizedImage.','p11')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 11</mat-panel-title>
+								<mat-panel-description>Optimización de imagenes</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica el NgOptimizedImage para garantizar que las imagenes se carguen de manera eficiente.</p>
+							</mat-expansion-panel>
+			
+							<mat-expansion-panel hideToggle (click)="onButtonClick('Enrutamiento','12','2','En esta actividad se pone en practica la configuración y enrutamiento de Angular Router.', 'En la mayoría de las aplicaciones, llega un momento en el que se requiere más de una página. Cuando llega ese momento, el enrutamiento se convierte en una parte importante del rendimiento para los usuarios.','p12')">
+							<mat-expansion-panel-header class="bg-white hover:bg-gray-500">
+								<mat-panel-title>Practica 12</mat-panel-title>
+								<mat-panel-description>Enrutamiento</mat-panel-description>
+							</mat-expansion-panel-header>
+							<p>En esta actividad se pone en practica la configuración y enrutamiento de Angular Router.</p>
+							</mat-expansion-panel>
+						</mat-accordion>
+					</div>
 				</li>
 				<li>
-					<a href="#" class="mx-5 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tareas</a>
+					<a href="#" class="min-w-30 h-6 text-center block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-gray-500 transition duration-300 ease-in-out">Tareas</a>
 				</li>
 				<li>
-					<a href="#" class="mx-5 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Examen Practico</a>
+					<a href="#" class="min-w-30 h-6 text-center block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-gray-500 transition duration-300 ease-in-out">Examen Practico</a>
 				</li>
 				<li>
-					<a href="#" class="mx-5 block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Acerca de</a>
+					<a href="#" class="min-w-30 h-6 text-center block py-2 px-3 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-gray-500 transition duration-300 ease-in-out">Acerca de</a>
 				</li>
+				<li><div class="w-50"></div></li>
 			</ul>
 		</div>
 	</div>

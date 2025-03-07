@@ -5,13 +5,42 @@
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .spacer {
     flex: 1;
 }
-
 .user-avatar {
     width: 40px;
     height: 40px;
     border-radius: 50px;
+}
+.navbarfull {
+    background-color: #FAF9FD;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay {
+    z-index: 10;
+}
+.modal-content {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+}
+.filtro-modal-blur {
+    position: relative;
+    z-index: 11;
 }

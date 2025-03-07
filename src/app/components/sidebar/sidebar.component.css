@@ -2,22 +2,21 @@
 	display: flex;
 	height: 100%;
 	position: relative;
-	background-color: #ffffff00;
+	background-color: #FAF9FD;
 }
-
 .sidebar {
 	transition: width 0.3s ease;
-	background-color: #2a355f;
 	transform: translateX(0);
-	color: #fff;
 	width: 100%;
+	background-color: #FAF9FD;
 }
-
 .sidebar.isHidden {
 	transform: translateX(-100%);
 	overflow: hidden;
 }
-
+.barritainferior {
+	border-bottom: 1px solid #c8d0df;
+}
 mat-sidenav-content {
 	flex-grow: 1;
 	transition: all 0.3s ease;

@@ -2,14 +2,14 @@
     display: flex;
     flex: 1;
     height: 100vh;
+    background: #fff;
 }
-
 .container app-sidebar {
     height: 100%;
     width: 25%;
+    min-width: 25%;
     transition: all 0.3s ease;
 }
-
 .container app-page-content {
     flex-grow: 1;
     transition: all 0.3s ease;

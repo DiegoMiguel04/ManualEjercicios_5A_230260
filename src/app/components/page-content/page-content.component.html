@@ -1,3 +1,3 @@
-<app-breadcrumb></app-breadcrumb>
-<app-content></app-content>
+<app-breadcrumb *ngIf="!hideAll"></app-breadcrumb>
+<app-content [content]="selectedContent" [hideAll]="hideAll" (showAll)="onShowAll()"></app-content>
 <app-footer></app-footer>

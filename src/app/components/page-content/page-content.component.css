@@ -1,16 +1,13 @@
 * {
     height: 100%;
-    color: #fff;
+    margin-right: 75px;
 }
-
 app-breadcrumb {
-    height: 15%;
+    height: 5%;
 }
-
 app-content {
-    height: 70%;
+    height: 80%;
 }
-
 app-footer {
     height: 15%;
 }

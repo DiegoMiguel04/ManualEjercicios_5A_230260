@@ -15,8 +15,8 @@ import {
   renderModule
 } from "./chunk-KIJ4JQKW.js";
 import "./chunk-CZPS5DJO.js";
-import "./chunk-UGUSJNV7.js";
 import "./chunk-7AKAV2TT.js";
+import "./chunk-UGUSJNV7.js";
 import "./chunk-BGILPUG2.js";
 import "./chunk-CH64OKJE.js";
 import "./chunk-YHCV7DAQ.js";
