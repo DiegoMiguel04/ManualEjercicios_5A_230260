@@ -116,7 +116,8 @@ export class ContentComponent {
     \`,
   })
 
-  export class Practica01Component {}`;
+  export class Practica01Component {}
+  `;
   hardcode2=`
   import {Component} from '@angular/core';
 
@@ -129,7 +130,8 @@ export class ContentComponent {
 
   export class Practica02Component {
     city = 'Huauchinango';
-  }`;
+  }
+  `;
   hardcode3=`
   import {Component} from '@angular/core';
 
@@ -153,7 +155,8 @@ export class ContentComponent {
     imports: [UserNameComponent],
   })
 
-  export class Practica03Component {}`;
+  export class Practica03Component {}
+  `;
   hardcode4=`
   import {Component} from '@angular/core';
 
@@ -170,7 +173,8 @@ export class ContentComponent {
 
   export class Practica04Component {
     isServerRunning = true;
-  }`;
+  }
+  `;
   hardcode5=`
   import {Component} from '@angular/core';
 
@@ -191,7 +195,8 @@ export class ContentComponent {
       {id: 3, name: 'Jessica'},
       {id: 4, name: 'Poornima'},
     ];
-  }`;
+  }
+  `;
   hardcode6=`
   import {Component} from '@angular/core';
 
@@ -205,7 +210,8 @@ export class ContentComponent {
 
   export class Practica06Component {
     isEditable = true;
-  }`;
+  }
+  `;
   hardcode7=`
   import {Component} from '@angular/core';
 
@@ -226,7 +232,15 @@ export class ContentComponent {
     }
   }
   `;
-  hardcode8=`
+  p08= 0;
+  switch_p08a() {
+    this.p08= 0;
+  }
+  switch_p08b() {
+    this.p08= 1;
+  }
+  hardcode8a=`
+  
   import {Component, Input} from '@angular/core';
 
   @Component({
@@ -238,11 +252,8 @@ export class ContentComponent {
   export class Practica08AComponent {
     @Input() name = '';
   }
-    
-  
-  
-  
-  
+  `;
+  hardcode8b=`
   import {Component} from '@angular/core';
   import { Practica08AComponent } from './practica08a.component';
 
@@ -254,8 +265,17 @@ export class ContentComponent {
     imports: [Practica08AComponent],
   })
 
-  export class Practica08BComponent {}`;
-  hardcode9=`
+  export class Practica08BComponent {}
+  `;
+  p09= 0;
+  switch_p09a() {
+    this.p09= 0;
+  }
+  switch_p09b() {
+    this.p09= 1;
+  }
+  hardcode9a=`
+
   import {Component, Output, EventEmitter} from '@angular/core';
   
   @Component({
@@ -273,9 +293,8 @@ export class ContentComponent {
       this.addItemEvent.emit('🥶');
     }
   }
-
-
-
+  `;
+  hardcode9b=`
   import {Component} from '@angular/core';
   import { Practica09AComponent } from './practica09a.component';
 
@@ -296,7 +315,15 @@ export class ContentComponent {
     }
   }
   `;
-  hardcode10=`
+  p10= 0;
+  switch_p10a() {
+    this.p10= 0;
+  }
+  switch_p10b() {
+    this.p10= 1;
+  }
+  hardcode10a=`
+
   import {Component} from '@angular/core';
   import { Practica10BComponent } from './practica10b.component';
 
@@ -307,7 +334,7 @@ export class ContentComponent {
         <h1>How I feel about Angular</h1>
         <article>
           <p>
-            Angular is my favorite framework, and this is why. Angular has the coolest deferrable view
+            Angular is my favorite framework, and this is why.Angular has the coolest deferrable view
             feature that makes defer loading content the easiest and most ergonomic it could possibly
             be. The Angular community is also filled with amazing contributors and experts that create
             excellent content. The community is welcoming and friendly, and it really is the best
@@ -328,12 +355,10 @@ export class ContentComponent {
     imports: [Practica10BComponent],
   })
   export class Practica10AComponent {}
-
-
-
-
-
+  `;
+  hardcode10b=`
   import {Component} from '@angular/core';
+
   @Component({
     selector: 'app-practica10-b',
     template: \`
@@ -345,7 +370,9 @@ export class ContentComponent {
       </ul>
     \`,
   })
-  export class Practica10BComponent {}`;
+
+  export class Practica10BComponent {}
+  `;
   hardcode11=`
   import {Component} from '@angular/core';
   import {NgOptimizedImage} from '@angular/common';
@@ -372,8 +399,24 @@ export class ContentComponent {
     logoUrl = '../assets/angular-icon.png';
     logoAlt = 'Angular logo';
     username = 'xkis_';
-  }`;
-  hardcode12=`
+  }
+  `;
+  p12= 0;
+  switch_p12a() {
+    this.p12= 0;
+  }
+  switch_p12b() {
+    this.p12= 1;
+  }
+  switch_p12c() {
+    this.p12= 2;
+  }
+  hardcode12a=`
+
+  import {Routes} from '@angular/router';
+  export const routes: Routes = [];
+  `;
+  hardcode12b=`
   import {Component} from '@angular/core';
   import {RouterOutlet} from '@angular/router';
   
@@ -389,12 +432,10 @@ export class ContentComponent {
     \`,
     imports: [RouterOutlet],
   })
+
   export class Practica12AComponent {}
-
-
-
-
-
+  `;
+  hardcode12c=`
   import {ApplicationConfig} from '@angular/core';
   import {provideRouter} from '@angular/router';
   
@@ -403,11 +444,27 @@ export class ContentComponent {
   export const appConfig: ApplicationConfig = {
     providers: [provideRouter(routes)],
   };
+  `;
 
 
 
 
 
-  import {Routes} from '@angular/router';
-  export const routes: Routes = [];`;
+
+
+
+  //! //////////////////////////////////////////////
+  rawCode: string = `
+    function helloWorld() {
+        console.log("Hola, mundo!");
+    }
+  `;
+
+  highlightedCode: string = '';
+  ngOnInit() {
+    this.highlightedCode = this.rawCode
+      .replace(/function/g, '<span class="text-blue-500"> functio</span>')
+      .replace(/console/g, '<span class="text-green-500">console</span>')
+      .replace(/"([^"]*)"/g, '<span class="text-red-500">"$1"</span>');
+  }
 }

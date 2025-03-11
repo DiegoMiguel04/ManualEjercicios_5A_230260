@@ -1,3 +1,5 @@
 <app-breadcrumb *ngIf="!hideAll"></app-breadcrumb>
-<app-content [content]="selectedContent" [hideAll]="hideAll" (showAll)="onShowAll()"></app-content>
+<app-content [content]="selectedContent" [hideAll]="hideAll" (showAll)="onShowAll()" *ngIf="!isOpenDashboard"></app-content>
+<app-dashboard *ngIf="isOpenDashboard && !isOpenDataTable"></app-dashboard>
+<app-datatable *ngIf="isOpenDataTable"></app-datatable>
 <app-footer></app-footer>

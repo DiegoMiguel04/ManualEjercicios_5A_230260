@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
@@ -17,16 +17,27 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 })
 export class AppComponent {
   title = 'ManualEjercicios_5A_230260';
+  
   isSidebarHidden: boolean = false;
   toggleSidebar() {
      this.isSidebarHidden = !this.isSidebarHidden;
   }
+
   hideAll = false;
   onHideAll() {
     this.hideAll = true;
   }
   onShowAll() {
     this.hideAll = false;
+  }
+
+  isOpenDashboard = false;
+  isOpenDataTable = false;
+  switchDashboard(value: boolean) {
+    this.isOpenDashboard = value;
+  }
+  switchDataTable(value: boolean) {
+    this.isOpenDataTable = value;
   }
 
   selectedTitle: any = "Componentes en Angular";

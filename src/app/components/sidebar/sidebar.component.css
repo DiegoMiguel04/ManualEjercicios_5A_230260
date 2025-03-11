@@ -1,14 +1,13 @@
 .sidebar-container {
 	display: flex;
-	height: 100%;
+	min-height: 500px;
 	position: relative;
-	background-color: #FAF9FD;
 }
 .sidebar {
 	transition: width 0.3s ease;
 	transform: translateX(0);
+	/* opacity: 1; */
 	width: 100%;
-	background-color: #FAF9FD;
 }
 .sidebar.isHidden {
 	transform: translateX(-100%);
@@ -20,4 +19,13 @@
 mat-sidenav-content {
 	flex-grow: 1;
 	transition: all 0.3s ease;
+}
+mat-expansion-panel-header, .sidebar-container, .sidebar {
+	background-color: #FAF9FD;
+}
+mat-expansion-panel {
+	box-shadow: none !important;
+}
+mat-panel-title {
+	padding-left: 40px;
 }

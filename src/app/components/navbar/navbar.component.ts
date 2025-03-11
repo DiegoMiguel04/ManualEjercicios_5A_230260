@@ -13,15 +13,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isModalOpen = false;
-  openModal() {
-    this.isModalOpen = true;
-  }
+  isModalOpen = true;
   toggleModal() {
     this.isModalOpen = !this.isModalOpen;
-  }
-  closeModal() {
-    this.isModalOpen = false;
   }
 
   @Output() valuesChange = new EventEmitter<any>();
@@ -36,14 +30,20 @@ export class NavbarComponent {
     });
   }
 
-
   @Output() hideAll = new EventEmitter<void>();
   onHideAll() {
     this.hideAll.emit();
   }
 
+  @Output() isOpenDashboard = new EventEmitter<boolean>();
+  openDashboard() {
+    this.isOpenDashboard.emit(true);
+  }
+  closeDashboard() {
+    this.isOpenDashboard.emit(false);
+  }
 
-  isDropdownOpen = false;
+  isDropdownOpen = true;
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }

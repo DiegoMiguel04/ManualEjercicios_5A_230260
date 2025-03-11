@@ -5,7 +5,7 @@
 app-breadcrumb {
     height: 5%;
 }
-app-content {
+app-content, app-dashboard {
     height: 80%;
 }
 app-footer {
