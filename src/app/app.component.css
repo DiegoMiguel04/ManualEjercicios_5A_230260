@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    background: #fff;
+}
+app-sidebar {
+    height: 100%;
+    width: 25%;
+    min-width: 25%;
+    transition: all 0.3s ease;
+    background-color: #FAF9FD;
+}
+.container app-page-content {
+    flex-grow: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.sidebarHidden {
+    max-width: 0%;
+    min-width: 0%;
+    width: 0%;
+}

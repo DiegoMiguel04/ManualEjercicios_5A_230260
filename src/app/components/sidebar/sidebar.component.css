@@ -1,0 +1,31 @@
+.sidebar-container {
+	display: flex;
+	min-height: 500px;
+	position: relative;
+}
+.sidebar {
+	transition: width 0.3s ease;
+	transform: translateX(0);
+	/* opacity: 1; */
+	width: 100%;
+}
+.sidebar.isHidden {
+	transform: translateX(-100%);
+	overflow: hidden;
+}
+.barritainferior {
+	border-bottom: 1px solid #c8d0df;
+}
+mat-sidenav-content {
+	flex-grow: 1;
+	transition: all 0.3s ease;
+}
+mat-expansion-panel-header, .sidebar-container, .sidebar {
+	background-color: #FAF9FD;
+}
+mat-expansion-panel {
+	box-shadow: none !important;
+}
+mat-panel-title {
+	padding-left: 40px;
+}

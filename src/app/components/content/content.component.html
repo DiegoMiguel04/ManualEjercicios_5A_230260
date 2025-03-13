@@ -1,0 +1,185 @@
+<div class="flex" *ngIf="!hideAll">
+    <div class="sub-container">
+        <div *ngIf="content === 'p1'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p01.component.ts</button>                  
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode1 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p2'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p02.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode2 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p3'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p03.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode3 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p4'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p04.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode4 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p5'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p05.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode5 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p6'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p06.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode6 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p7'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p07.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode7 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p8'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode" (click)="switch_p08a()">app/p08.user.component.ts</button>
+                <button class="button-filecode" (click)="switch_p08b()">app/p08.app.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code *ngIf="p08 === 0">{{ hardcode8a }}</code>
+                <code *ngIf="p08 === 1">{{ hardcode8b }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p9'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode" (click)="switch_p09a()">app/p09.child.component.ts</button>
+                <button class="button-filecode" (click)="switch_p09b()">app/p09.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code *ngIf="p09 === 0">{{ hardcode9a }}</code>
+                <code *ngIf="p09 === 1">{{ hardcode9b }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p10'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode" (click)="switch_p10a()">app/p10.component.ts</button>
+                <button class="button-filecode" (click)="switch_p10b()">app/p10.comments.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code *ngIf="p10 === 0">{{ hardcode10a }}</code>
+                <code *ngIf="p10 === 1">{{ hardcode10b }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p11'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode">app/p11.component.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code>{{ hardcode11 }}</code>
+            </pre>
+        </div>
+        <div *ngIf="content === 'p12'" class="cont-full">
+            <div class="header-code-container">
+                <button class="button-filecode" (click)="switch_p12a()">app/p12.routes.ts</button>
+                <button class="button-filecode" (click)="switch_p12b()">app/p12.component.ts</button>
+                <button class="button-filecode" (click)="switch_p12c
+                ()">app/p12.config.ts</button>
+            </div>
+            <pre class="font-mono text-sm code-container">
+                <code *ngIf="p12 === 0">{{ hardcode12a }}</code>
+                <code *ngIf="p12 === 1">{{ hardcode12b }}</code>
+                <code *ngIf="p12 === 2">{{ hardcode12c }}</code>
+            </pre>
+        </div>
+    </div>
+    <div class="sub-container borderer-c cont-full">
+        <div class="header-code-container text-gray-600"><p>Preview</p></div>
+        <div *ngIf="content === 'p1'" class="comp-container">
+            <app-practica01></app-practica01>
+        </div>
+        <div *ngIf="content === 'p2'" class="comp-container">
+            <app-practica02></app-practica02>
+        </div>
+        <div *ngIf="content === 'p3'" class="comp-container">
+            <app-practica03></app-practica03>
+        </div>
+        <div *ngIf="content === 'p4'" class="comp-container">
+            <app-practica04></app-practica04>
+        </div>
+        <div *ngIf="content === 'p5'" class="comp-container">
+            <app-practica05></app-practica05>
+        </div>
+        <div *ngIf="content === 'p6'" class="comp-container">
+            <app-practica06></app-practica06>
+        </div>
+        <div *ngIf="content === 'p7'" class="comp-container">
+            <app-practica07></app-practica07>
+        </div>
+        <div *ngIf="content === 'p8'" class="comp-container">
+            <app-practica08-b></app-practica08-b>
+        </div>
+        <div *ngIf="content === 'p9'" class="comp-container">
+            <app-practica09-b></app-practica09-b>
+        </div>
+        <div *ngIf="content === 'p10'" class="comp-container">
+            <app-practica10-a></app-practica10-a>
+        </div>
+        <div *ngIf="content === 'p11'" class="comp-container">
+            <app-practica11></app-practica11>
+        </div>
+        <div *ngIf="content === 'p12'" class="comp-container">
+            <app-practica12-a></app-practica12-a>
+        </div>
+    </div>
+</div>
+<div *ngIf="hideAll">
+    <div class="container-form mx-auto p-4">
+        <div class="text-center max-h-18">
+          <h1 class="font-bold text-2xl">{{isLogin ? 'Iniciar sesión' : 'Registrarse'}}</h1>
+          <p>{{isLogin ? 'Inicia sesión con tu cuenta' : 'Crea una cuenta'}}</p>
+        </div>
+        <div *ngIf="showError" class="mx-3 p-3 mb-4 text-white bg-rose-600 rounded-sm max-h-8">
+            <span>{{ errorMessage }}</span>
+        </div>
+        <form class="space-y-4">
+            <mat-form-field *ngIf="!isLogin && isNameVisible" appearance="fill">
+                <mat-label>Nombre de usuario</mat-label>
+                <input matInput placeholder="Ingresa tu nombre" type="text" id="username" />
+            </mat-form-field>
+        
+            <mat-form-field appearance="fill">
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput placeholder="Ingresa tu correo" type="email" id="email" required matInput name="email"/>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input matInput placeholder="Ingresa tu contraseña" type="password" id="password" required/>
+            </mat-form-field>
+        
+            <div class="flex justify-center mt-5 max-h-15">
+                <button class="w-35 border-2 border-pink-700 text-pink-700 rounded-sm cursor-pointer hover:bg-pink-100 transition duration-200 ease-in-out" type="button" (click)="isLogin ? onSubmitLogin() : onToggleForm()">{{ isLogin ? 'Iniciar sesión' : 'Registrarse' }}</button>
+            </div>
+        
+            <div class="text-center mb-10 max-h-15">
+                <p *ngIf="isLogin">¿No tienes una cuenta? <button type="button" class="text-pink-700 font-bold cursor-pointer rounded-md transition duration-200 ease-in-out hover:bg-pink-50" (click)="onRegister()">¡Regístrate!</button></p>
+                <p *ngIf="!isLogin">¿Ya tienes cuenta? <button type="button" class="text-pink-700 font-bold cursor-pointer rounded-md transition duration-200 ease-in-out hover:bg-pink-50" (click)="onToggleForm()">¡Inicia sesión!</button></p>
+            </div>
+        </form>
+    </div>
+</div>

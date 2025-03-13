@@ -1,0 +1,13 @@
+* {
+    height: 100%;
+    margin-right: 75px;
+}
+app-breadcrumb {
+    height: 5%;
+}
+app-content, app-dashboard {
+    height: 80%;
+}
+app-footer {
+    height: 15%;
+}

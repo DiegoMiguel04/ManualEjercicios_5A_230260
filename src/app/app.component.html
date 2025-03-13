@@ -1,0 +1,24 @@
+<app-navbar (valuesChange)="onValuesChange($event)" *ngIf="!hideAll" (hideAll)="onHideAll()" (isOpenDashboard)="switchDashboard($event)"></app-navbar>
+<div class="container">
+	<app-sidebar
+		[ngClass]="{'sidebarHidden': isSidebarHidden}"
+		[selectedTitle]="selectedTitle"
+		[selectedUnit]="selectedUnit"
+		[selectedPractice]="selectedPractice"
+		[selectedObjective]="selectedObjective"
+		[selectedDescription]="selectedDescription"
+		[isOpenDashboard]="isOpenDashboard"
+		(isOpenDataTable)="switchDataTable($event)"
+		*ngIf="!hideAll"
+	></app-sidebar>
+	<div class="flex justify-center items-center h-full px-5" *ngIf="!hideAll">
+		<button (click)="toggleSidebar()" class="btn-sidebar hover:bg-gradient-to-t from-purple-200 to-pink-100 transition duration-200 ease-in-out min-w-10 min-h-10 cursor-pointer border rounded-sm border-pink-500"><</button>
+	</div>
+	<app-page-content
+		[selectedContent]="selectedContent"
+		[hideAll]="hideAll"
+		[isOpenDashboard]="isOpenDashboard"
+		[isOpenDataTable]="isOpenDataTable"
+		(showAll)="onShowAll()"
+	></app-page-content>
+</div>

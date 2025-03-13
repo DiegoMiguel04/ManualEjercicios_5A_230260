@@ -1,0 +1,74 @@
+.sticky-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.spacer {
+    flex: 1;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.navbarfull {
+    background-color: #FAF9FD;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    max-height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.m2 {
+    z-index: 15;
+}
+.modal-content {
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    background-color: transparent;
+    border-radius: 8px;
+    max-width: 550px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+.filtro-modal-blur {
+    position: relative;
+    z-index: 11;
+}
+.title-gradient, .btn-navbar-gradient:hover, .btn-leave-menu:hover {
+	font-weight: bold;
+	background-image: linear-gradient(90deg, #9038ee, #da4fc7, #e74c3c);
+	background-size: 200% 100%;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	animation: gradientMove 4s ease infinite;
+}
+@keyframes gradientMove {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+.isModalOpen, .isDropdownOpen {
+    transition: all 0.3s ease-in-out;
+    max-height: 0%;
+    backdrop-filter: blur(0);
+}
+.isDropdownOpen {
+    top: -2%;
+}
+.isModalOpen {
+    top: 6%;
+}
