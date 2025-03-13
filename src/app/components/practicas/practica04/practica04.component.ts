@@ -12,5 +12,5 @@ import {Component} from '@angular/core';
 })
 
 export class Practica04Component {
-  isServerRunning = true;
+  isServerRunning = false;
 }

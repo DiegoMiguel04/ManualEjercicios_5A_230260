@@ -9,5 +9,5 @@ import {Component} from '@angular/core';
 })
 
 export class Practica06Component {
-  isEditable = true;
+  isEditable = false;
 }
